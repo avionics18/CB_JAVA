@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>L03__Operators_and_Variables</title>
+	<meta name="description" content="L03__Operators_and_Variables">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+	<style>
+		.container {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			border-top: 8px solid var(--pico-primary);
+		}
+		@media (min-width: 1536px) {
+			.container {
+				max-width: 1200px;
+			}
+		}
+	</style>
+	<!--- PRISM CSS --->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-okaidia.min.css" />
+	<!--- HIGHLIGHT CSS --->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+		integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<main class="container">
+		<!--- ALL YOUR CONTENT HERE --->
+<h1 id="operatorsandvariables">Operators and Variables</h1>
+<h2 id="eclipseinstallation">Eclipse Installation</h2>
+<ol>
+<li><p>Install <strong>Eclipse IDE for Java Developers</strong>.</p></li>
+<li><p>Open Eclipse IDE.</p>
+<p><em>If by chance, you see a blank screen like below, <code>Project Explorer</code> is not open.</em></p>
+<p><img src="imgs/L03__01.png" alt="eclipse ide" /></p>
+<p><em>Then, you can open it by clicking on the search icon and search for <code>package explorer</code> and hit enter. This will open package explorer on the right sidebar.</em></p>
+<p><img src="imgs/L03__02.png" alt="eclipse ide" /></p></li>
+<li><p>Create a new project:</p>
+<pre><code class="text language-text">File &gt; New Project &gt; Java Project
+</code></pre>
+<p>Enter the name of your project (<em>Don't use spaces</em>).</p>
+<ul>
+<li>Use default location</li>
+<li><strong>JRE</strong>: Use an execution environment JRE: <code>JavaSE 11</code></li>
+<li><strong>Project Layout</strong>: Create seperate folders for sources and class files</li>
+<li><strong>Module</strong>: Uncheck create <code>module-info.java</code> file</li>
+<li>Finish</li></ul></li>
+</ol>
+<h2 id="vscodeinstallation">VS Code Installation</h2>
+<ol>
+<li><p>Create a directory where you want to save all your codes. Open that folder using vscode.</p></li>
+<li><p>Create a task:</p>
+<pre><code class="sh language-sh">Terminal &gt; Configure Tasks &gt; Create task.json file from template &gt; Others
+# and it will create vscode/tasks.json file
+</code></pre></li>
+<li><p>The tasks should look like this for proper execution of the java files (especially the ones present in sub-folders, <code>-cp</code> setting classpath is very important).</p>
+<pre><code class="json language-json">{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile-and-run-java",
+            "type": "shell",
+            "command": "javac '${file}' &amp;&amp; java -cp '${fileDirname}' ${fileBasenameNoExtension}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+</code></pre></li>
+<li><p>Now you're good to go. Open any file and press <code>Ctrl + Shift + B</code> to run the program in the shell.</p></li>
+</ol>
+<!--- ALL YOUR CONTENT HERE --->
+	</main>
+	<!--- HIGHLIGHT JS --->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+		integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/json.min.js"
+		integrity="sha512-f2/ljYb/tG4fTHu6672tyNdoyhTIpt4N1bGrBE8ZjwIgrjDCd+rljLpWCZ2Vym9PBWQy2Tl9O22Pp2rMOMvH4g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/java.min.js"
+		integrity="sha512-DTx6faal3nhEB55v+yn8UnXCxaxCdMR6gBZ0zzXhGD2qvtgf6xbW5iA7G4CUn78R9PoPzTelR7xIQwGNUJAv2w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/bash.min.js"
+		integrity="sha512-nQ9BQEzuov+Ry6EIH8ve7VKKdOG91Ix3SAQcFmOiBR5qG8sJONrph1InWTJOGjfP5QkSTSy4VnkEsPMoFYRsUQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>hljs.highlightAll();</script>
+</body>
+</html>
