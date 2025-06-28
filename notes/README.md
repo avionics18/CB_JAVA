@@ -1,6 +1,8 @@
-# Operators and Variables
+# Coding Blocks Java
 
-## Eclipse Installation
+## Installation & Running Java Guide
+
+### Eclipse Installation
 
 1. Install **Eclipse IDE for Java Developers**.
 2. Open Eclipse IDE.
@@ -27,7 +29,7 @@
     - **Module**: Uncheck create `module-info.java` file
     - Finish
 
-## VS Code Installation
+### VS Code Installation
 
 1. Create a directory where you want to save all your codes. Open that folder using vscode.
 2. Create a task:
@@ -59,3 +61,14 @@
     ```
 
 4. Now you're good to go. Open any file and press `Ctrl + Shift + B` to run the program in the shell.
+
+### Using `run-java.sh`
+
+you can run any java code using the `run-java.sh` bash script:
+
+```sh
+# Example:
+./run_java.sh MyProgram.java
+./run_java.sh src/com/example/MyClass.java
+./run_java.sh build/MyClass.class
+```
