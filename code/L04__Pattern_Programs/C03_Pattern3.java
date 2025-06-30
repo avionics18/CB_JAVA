@@ -24,11 +24,12 @@ public class C03_Pattern3 {
 			n = Integer.parseInt(args[0]);
 		}
 
-		// no. of stars = rowNumber
+		int stars = 1;
+		int spaces = n - 1;
+
 		int row = 1;
 		while (row <= n) {
 			// printing spaces
-			int spaces = n - row; // no. of spaces = n - rowNumber
 			int col = 1;
 			while (col <= spaces) {
 				// we need to print 2 spaces as
@@ -39,7 +40,6 @@ public class C03_Pattern3 {
 			}
 
 			// printing stars
-			int stars = row; // no. of stars = rowNumber
 			col = 1;
 			while (col <= stars) {
 				System.out.print("* ");
@@ -48,6 +48,8 @@ public class C03_Pattern3 {
 
 			// next row prep
 			row++;
+			stars++;
+			spaces--;
 			System.out.println();
 		}
 	}

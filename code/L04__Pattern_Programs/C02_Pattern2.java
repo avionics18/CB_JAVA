@@ -15,10 +15,8 @@ public class C02_Pattern2 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the value of n = ");
 		int n = sc.nextInt();
-
-		// STEP 2: Here we want the number of stars
-		// to be equal to the row number
 		int stars = 1;
+
 		int row = 1;
 		while (row <= n) {
 			int col = 1;
