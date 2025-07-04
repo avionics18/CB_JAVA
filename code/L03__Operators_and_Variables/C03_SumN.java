@@ -1,3 +1,4 @@
+package code.L03__Operators_and_Variables;
 
 // Find the sum of n natural numbers
 import java.util.Scanner;

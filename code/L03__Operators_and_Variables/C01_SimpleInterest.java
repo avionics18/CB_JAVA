@@ -1,3 +1,5 @@
+package code.L03__Operators_and_Variables;
+
 import java.util.Scanner;
 
 public class C01_SimpleInterest {
