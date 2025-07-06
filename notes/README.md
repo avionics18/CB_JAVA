@@ -62,6 +62,8 @@
 
 4. Now you're good to go. Open any file and press `Ctrl + Shift + B` to run the program in the shell.
 
+> **NOTE:** Wouldn't work in case the file is not default package.
+
 ### Using `run-java.sh`
 
 you can run any java code using the `run-java.sh` bash script:
@@ -70,13 +72,14 @@ you can run any java code using the `run-java.sh` bash script:
 # Example:
 ./run_java.sh MyProgram.java
 ./run_java.sh src/com/example/MyClass.java
-./run_java.sh build/MyClass.class
 ```
 
 
 ## How to Debug a Java program
 
 To debug a java program, you need to compile the program using `-g` flag, it adds the neccessary debugging information.
+
+> NOTE: you also need to update the code for input as once in debugging mode, jdb won't accept input to programs. It inteprets it command for itself.
 
 ```sh
 javac -g Add.java
@@ -86,6 +89,8 @@ And then run the program using `jdb` and not `java`.
 
 ```sh
 jdb Add
+# or if it is a package
+jdb code.L01.Add
 ```
 
 Now you can refer to the commands to use the debugger.
@@ -93,6 +98,8 @@ Now you can refer to the commands to use the debugger.
 ```sh
 # Add a breakpoint
 stop at Add:4
+# or if it is a package
+stop at code.L01.Add:4
 
 # you can add multiple breakpoints
 stop at Add:6 # press enter
