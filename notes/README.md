@@ -66,7 +66,42 @@
 
 ### Using `run-java.sh`
 
-you can run any java code using the `run-java.sh` bash script:
+you can run any java code using the `run-java.sh` bash script. Please note that you need to specify `package` name at the top of every file and if using a `public` class then the name of the file should be same as the class name.
+
+```sh
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <Java file path>"
+  echo "Example: $0 code/zzTest/Test.java"
+  exit 1
+fi
+
+JAVA_FILE="$1"
+
+if [ ! -f "$JAVA_FILE" ]; then
+  echo "Error: File not found: $JAVA_FILE"
+  exit 1
+fi
+
+# Compile the Java file
+javac "$JAVA_FILE"
+if [ $? -ne 0 ]; then
+  echo "Compilation failed."
+  exit 1
+fi
+
+# Derive fully qualified class name
+PACKAGE_PATH=$(dirname "$JAVA_FILE")
+PACKAGE_PATH=${PACKAGE_PATH//\//.}  # Convert / to .
+CLASS_NAME=$(basename "$JAVA_FILE" .java)
+FQCN="${PACKAGE_PATH}.${CLASS_NAME}"
+
+# echo "Running ${FQCN}..."
+java "$FQCN"
+```
+
+And in the terminal, run the file using the below comand:
 
 ```sh
 # Example:
