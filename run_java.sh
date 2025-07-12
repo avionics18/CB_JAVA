@@ -1,23 +1,23 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 <Java file path>"
-  echo "Example: $0 code/zzTest/Test.java"
-  exit 1
+    echo "Usage: $0 <Java file path>"
+    echo "Example: $0 code/zzTest/Test.java"
+    exit 1
 fi
 
 JAVA_FILE="$1"
 
 if [ ! -f "$JAVA_FILE" ]; then
-  echo "Error: File not found: $JAVA_FILE"
-  exit 1
+    echo "Error: File not found: $JAVA_FILE"
+    exit 1
 fi
 
 # Compile the Java file
 javac "$JAVA_FILE"
 if [ $? -ne 0 ]; then
-  echo "Compilation failed."
-  exit 1
+    echo "Compilation failed."
+    exit 1
 fi
 
 # Derive fully qualified class name
