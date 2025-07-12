@@ -1,8 +1,20 @@
-package code.zzTest;
+/*
+
+* * * * * * * 
+* * *   * * * 
+* *       * * 
+*           * 
+* *       * * 
+* * *   * * * 
+* * * * * * *
+
+*/
+
+package code.L05__Mirror_and_Number_Pattern;
 
 import java.util.Scanner;
 
-public class Test {
+public class C03_Pattern3 {
 	public static void main(String[] args) {
 		System.out.print("n = ");
 		Scanner sc = new Scanner(System.in);
@@ -10,12 +22,14 @@ public class Test {
 		sc.close();
 
 		// no. of stars and spaces
+		// - In case of spaces, we're starting with -1
+		// as the spaces will incrment by +2.
 		int stars = n / 2 + 1, spaces = -1;
 
 		int row = 1;
 		while (row <= n) {
-			// steps to perform in each row
-			// 1. print left star triangle
+			// perform steps for each row
+			// 1. print stars
 			int i = 1;
 			while (i <= stars) {
 				System.out.print("* ");
@@ -29,7 +43,9 @@ public class Test {
 				j++;
 			}
 
-			// 3. print right star triangle
+			// 3. print stars
+			// - Here we only need to take care of the first and
+			// last row for that extra "*" or when stars = n / 2 + 1.
 			int k = 1;
 			if (stars == n / 2 + 1) {
 				k = 2;
@@ -40,7 +56,7 @@ public class Test {
 			}
 
 			// 4. prep for next row
-			if (row <= n / 2) {
+			if (row < n / 2 + 1) {
 				stars--;
 				spaces += 2;
 			} else {
