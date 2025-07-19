@@ -1,6 +1,6 @@
 // Check if a num is prime or not
 
-package code.L06_Loops;
+package code.L06__Loops;
 
 import java.util.Scanner;
 

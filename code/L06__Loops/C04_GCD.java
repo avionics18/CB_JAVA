@@ -1,4 +1,4 @@
-package code.L06_Loops;
+package code.L06__Loops;
 
 import java.util.Scanner;
 

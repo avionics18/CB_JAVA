@@ -1,4 +1,4 @@
-package code.L06_Loops;
+package code.L06__Loops;
 
 public class C06_PascalTriangle {
     public static void main(String[] args) {
