@@ -172,3 +172,7 @@ You can now use JDB commands to debug the program. Here are some commonly used c
 - `resume` - Resumes all threads.
 - `help` - Displays a list of available JDB commands.
 - `exit` - Exits JDB.
+
+## Contests Links
+
+1. [Assignment 1 | L06_Loops](https://hack.codingblocks.com/app/contests/3988)
