@@ -175,4 +175,5 @@ You can now use JDB commands to debug the program. Here are some commonly used c
 
 ## Contests Links
 
-1. [Assignment 1 | L06_Loops](https://hack.codingblocks.com/app/contests/3988)
+1. [Assignment 1 | Patterns | L06_Loops](https://hack.codingblocks.com/app/contests/3988)
+2. [Assignment 2| Number System & Data Types 1 | L09_Data_Types_3](https://hack.codingblocks.com/app/contests/4035)
