@@ -1,6 +1,10 @@
 package code.L09__Data_Types_3;
 
 import java.util.Scanner;
+
+// In Java,it is not necessary to explicitly import java.lang.Math 
+// because the java.lang package is automatically imported into 
+// every Java program by default.
 import java.lang.Math;
 
 public class C02_Custom_Inverse_Num {
